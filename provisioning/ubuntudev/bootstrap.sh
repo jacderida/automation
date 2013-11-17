@@ -9,6 +9,7 @@ function initial_setup {
 function install_apt_packages {
 	apt-get -y install git
 	apt-get -y install subversion
+	apt-get -y install vim-gnome
 }
 
 function install_oracle_jdk_6 {
