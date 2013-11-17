@@ -32,6 +32,13 @@ function install_oracle_jdk_6 {
 	echo "export PATH" >> /etc/profile	
 }
 
+function install_oracle_jdk_7 {
+	wget --output-document=/tmp/vagrant/jdk-7u45-linux-x64.gz https://jacderida-software.s3.amazonaws.com/jdk-7u45-linux-x64.gz
+	tar -xvf /tmp/vagrant/jdk-7u45-linux-x64.gz
+	mv ./jdk1.7.0_45 ./java-7-oracle/
+	mv ./java-7-oracle /usr/lib/jvm/
+}
+
 function install_virtualbox {
 	wget --output-document=/tmp/vagrant/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb http://download.virtualbox.org/virtualbox/4.2.18/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb
 	dpkg -i /tmp/vagrant/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb
@@ -51,6 +58,7 @@ function install_chrome {
 initial_setup
 install_apt_packages
 install_oracle_jdk_6
+install_oracle_jdk_7
 install_virtualbox
 install_vagrant
 install_chrome
