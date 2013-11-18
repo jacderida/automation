@@ -40,12 +40,12 @@ function install_oracle_jdk_7 {
 }
 
 function install_virtualbox {
-	wget --output-document=/tmp/vagrant/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb http://download.virtualbox.org/virtualbox/4.2.18/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb
+	wget --output-document=/tmp/vagrant/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb https://jacderida-software.s3.amazonaws.com/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb
 	dpkg -i /tmp/vagrant/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb
 }
 
 function install_vagrant {
-	wget --output-document=/tmp/vagrant/vagrant_1.3.5_x86_64.deb http://files.vagrantup.com/packages/a40522f5fabccb9ddabad03d836e120ff5d14093/vagrant_1.3.5_x86_64.deb
+	wget --output-document=/tmp/vagrant/vagrant_1.3.5_x86_64.deb https://jacderida-software.s3.amazonaws.com/vagrant_1.3.5_x86_64.deb
 	dpkg -i /tmp/vagrant/vagrant_1.3.5_x86_64.deb
 }
 
