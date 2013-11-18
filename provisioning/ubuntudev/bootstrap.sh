@@ -66,9 +66,11 @@ function install_chrome {
 }
 
 function install_netbeans {
-	wget --output-document=/tmp/vagrant/netbeans-7.4-javase-linux.sh https://jacderida-software.s3.amazonaws.com/netbeans-7.4-javase-linux.sh
-	echo "Installing netbeans 7.4 in silent mode. This may take several minutes..."
-	sh /tmp/vagrant/netbeans-7.4-javase-linux.sh --silent
+	if [ ! -e /usr/local/netbeans-7.4/bin/netbeans ]; then
+		wget --output-document=/tmp/vagrant/netbeans-7.4-javase-linux.sh https://jacderida-software.s3.amazonaws.com/netbeans-7.4-javase-linux.sh
+		echo "Installing netbeans 7.4 in silent mode. This may take several minutes..."
+		sh /tmp/vagrant/netbeans-7.4-javase-linux.sh --silent
+	fi
 }
 
 initial_setup
