@@ -11,4 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.provider :virtualbox do |vb|
 		vb.gui = true
 	end
+	if ENV['http_proxy']
+		config.apt_proxy.http  = ENV['http_proxy']
+	end
 end
