@@ -75,6 +75,13 @@ function install_netbeans {
 	fi
 }
 
+function install_install4j {
+	if [ ! -e /opt/install4j/bin/install4j ]; then
+		wget --output-document=/tmp/vagrant/install4j_linux_5_1_7.deb https://jacderida-software.s3.amazonaws.com/install4j_linux_5_1_7.deb
+		dpkg -i /tmp/vagrant/install4j_linux_5_1_7.deb
+	fi
+}
+
 initial_setup
 install_apt_packages
 install_oracle_jdk_6
@@ -83,4 +90,5 @@ install_virtualbox
 install_vagrant
 install_chrome
 install_netbeans
+install_install4j
 rm -r /tmp/vagrant
