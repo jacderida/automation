@@ -10,6 +10,8 @@ function install_apt_packages {
 	apt-get -y install git
 	apt-get -y install subversion
 	apt-get -y install vim-gnome
+	add-apt-repository -y ppa:rabbitvcs/ppa && apt-get update
+	apt-get -y install rabbitvcs-core rabbitvcs-nautilus3 rabbitvcs-cli
 }
 
 function install_oracle_jdk_6 {
