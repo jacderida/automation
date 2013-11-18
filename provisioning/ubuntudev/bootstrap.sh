@@ -65,6 +65,12 @@ function install_chrome {
 	fi
 }
 
+function install_netbeans {
+	wget --output-document=/tmp/vagrant/netbeans-7.4-javase-linux.sh https://jacderida-software.s3.amazonaws.com/netbeans-7.4-javase-linux.sh
+	echo "Installing netbeans 7.4 in silent mode. This may take several minutes..."
+	sh /tmp/vagrant/netbeans-7.4-javase-linux.sh --silent
+}
+
 initial_setup
 install_apt_packages
 install_oracle_jdk_6
@@ -72,4 +78,5 @@ install_oracle_jdk_7
 install_virtualbox
 install_vagrant
 install_chrome
+install_netbeans
 rm -r /tmp/vagrant
