@@ -13,6 +13,8 @@ function install_apt_packages {
 	apt-get -y install vim-gnome
 	add-apt-repository -y ppa:rabbitvcs/ppa && apt-get update
 	apt-get -y --force-yes install rabbitvcs-core rabbitvcs-nautilus3 rabbitvcs-cli
+	add-apt-repository -y ppa:cairo-dock-team/ppa && apt-get update
+	apt-get -y install cairo-dock cairo-dock-plug-ins
 }
 
 function install_oracle_jdk_6 {
