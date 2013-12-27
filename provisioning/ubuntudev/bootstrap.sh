@@ -13,6 +13,7 @@ function install_apt_packages {
 	apt-get -y install vim-gnome
 	add-apt-repository -y ppa:rabbitvcs/ppa && apt-get update
 	apt-get -y --force-yes install rabbitvcs-core rabbitvcs-nautilus3 rabbitvcs-cli
+	apt-get -y install curl
 }
 
 function install_oracle_jdk_6 {
