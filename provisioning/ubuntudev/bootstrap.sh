@@ -15,7 +15,6 @@ function install_apt_packages {
 	add-apt-repository -y ppa:rabbitvcs/ppa && apt-get update
 	apt-get -y --force-yes install rabbitvcs-core rabbitvcs-nautilus3 rabbitvcs-cli
 	apt-get -y install curl
-	apt-get -y install python-pip
 }
 
 function install_oracle_jdk_6 {
