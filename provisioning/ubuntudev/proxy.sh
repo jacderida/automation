@@ -18,6 +18,7 @@ if [ ! -e /etc/apt/apt.conf.d/80proxy ]; then
 	echo "Acquire::socks::proxy \"http://$http_proxy/\";" >> /etc/apt/apt.conf.d/80proxy
 
 	echo "export http_proxy=$1" >> /etc/profile.d/setproxy.sh
+	echo "export https_proxy=$1" >> /etc/profile.d/setproxy.sh
 	chmod +x /etc/profile.d/setproxy.sh
 
 	echo "http_proxy=\"http://$1/\"" >> /etc/environment
