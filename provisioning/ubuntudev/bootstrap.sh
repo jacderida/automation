@@ -20,4 +20,3 @@ function install_apt_packages {
 
 initial_setup
 install_apt_packages
-rm -r /tmp/vagrant
