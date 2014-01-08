@@ -14,14 +14,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 			puppet.manifest_file  = "docsplit.pp"
 		end
 		vb.vm.provision :shell, :path => "../../sh/mono.sh"
-		vb.vm.provision :shell, :path => "../../sh/gearmand.sh"
+		vb.vm.provision :shell, :path => "../../sh/gearmand-debian.sh"
 	end
 
 	config.vm.provider :aws do |aws, override|
 		override.vm.box = "dummy"
 		override.vm.provision :shell, :path => "bootstrap.sh"
 		override.vm.provision :shell, :path => "../../sh/mono.sh"
-		override.vm.provision :shell, :path => "../../sh/gearmand.sh"
+		override.vm.provision :shell, :path => "../../sh/gearmand-debian.sh"
 		override.vm.provision :puppet do |puppet|
 			puppet.manifests_path = "../../puppet"
 			puppet.manifest_file  = "docsplit.pp"
