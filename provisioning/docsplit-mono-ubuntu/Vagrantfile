@@ -1,0 +1,38 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+	config.vm.define :default do |vb|
+		vb.vm.box = "precise64"
+		vb.vm.box_url = "http://files.vagrantup.com/precise64.box"
+		vb.vm.provision :shell, :path => "bootstrap.sh"
+		vb.vm.provision :puppet do |puppet|
+			puppet.manifests_path = "../../puppet"
+			puppet.manifest_file  = "docsplit.pp"
+		end
+		vb.vm.provision :shell, :path => "../../sh/mono.sh"
+	end
+
+	config.vm.provider :aws do |aws, override|
+		override.vm.box = "dummy"
+		override.vm.provision :shell, :path => "bootstrap.sh"
+		override.vm.provision :shell, :path => "../../sh/mono.sh"
+		override.vm.provision :puppet do |puppet|
+			puppet.manifests_path = "../../puppet"
+			puppet.manifest_file  = "docsplit.pp"
+		end
+		aws.access_key_id = ENV['AWS_ACCESS_KEY_ID']
+		aws.secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+		aws.keypair_name = "docsplit"
+		aws.region = "eu-west-1"
+		aws.ami = "ami-bab653cd"
+		aws.instance_type = "m1.small"
+		aws.security_groups = [ "docsplit" ]
+		aws.tags = { 'Name' => 'docsplit' }
+		override.ssh.username = "ubuntu"
+		override.ssh.private_key_path = "~/.ssh/docsplit.pem"
+	end
+end
