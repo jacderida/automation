@@ -4,7 +4,7 @@ group { "puppet":
 
 package { 'docsplit':
 	ensure		=> installed,
-	provider	=> gem,
+						provider	=> gem,
 }
 
 exec { 'Install GraphicsMagick':
