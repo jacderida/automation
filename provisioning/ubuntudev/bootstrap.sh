@@ -54,7 +54,6 @@ function install_install4j {
 
 initial_setup
 install_apt_packages
-install_virtualbox
 install_chrome
 install_netbeans
 install_install4j
