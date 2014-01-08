@@ -25,13 +25,6 @@ function install_virtualbox {
 	fi
 }
 
-function install_vagrant {
-	if [ ! -e /opt/vagrant/bin/vagrant ]; then
-		wget --output-document=/tmp/vagrant/vagrant_1.3.5_x86_64.deb https://jacderida-software.s3.amazonaws.com/vagrant_1.3.5_x86_64.deb
-		dpkg -i /tmp/vagrant/vagrant_1.3.5_x86_64.deb
-	fi
-}
-
 function install_chrome {
 	if [ ! -e /opt/google/chrome/google-chrome ]; then
 		apt-get -y install libxss1
@@ -62,7 +55,6 @@ function install_install4j {
 initial_setup
 install_apt_packages
 install_virtualbox
-install_vagrant
 install_chrome
 install_netbeans
 install_install4j
