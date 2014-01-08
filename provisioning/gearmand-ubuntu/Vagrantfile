@@ -8,13 +8,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.define :default do |vb|
 		vb.vm.box = "precise64"
 		vb.vm.box_url = "http://files.vagrantup.com/precise64.box"
-		vb.vm.provision :shell, :path => "../../sh/gearmand.sh"
+		vb.vm.provision :shell, :path => "../../sh/gearmand-debian.sh"
 		vb.vm.network "forwarded_port", guest: 4730, host: 4731
 	end
 
 	config.vm.provider :aws do |aws, override|
 		override.vm.box = "dummy"
-		override.vm.provision :shell, :path => "../../sh/gearmand.sh"
+		override.vm.provision :shell, :path => "../../sh/gearmand-debian.sh"
 		aws.access_key_id = ""
 		aws.secret_access_key = ""
 		aws.keypair_name = "gearman"
