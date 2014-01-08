@@ -1,0 +1,29 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+	config.vm.define :default do |vb|
+		vb.vm.box = "precise64"
+		vb.vm.box_url = "http://files.vagrantup.com/precise64.box"
+		vb.vm.provision :shell, :path => "../../sh/gearmand.sh"
+		vb.vm.network "forwarded_port", guest: 4730, host: 4731
+	end
+
+	config.vm.provider :aws do |aws, override|
+		override.vm.box = "dummy"
+		override.vm.provision :shell, :path => "../../sh/gearmand.sh"
+		aws.access_key_id = ""
+		aws.secret_access_key = ""
+		aws.keypair_name = "gearman"
+		aws.region = "eu-west-1"
+		aws.ami = "ami-bab653cd"
+		aws.instance_type = "m1.small"
+		aws.security_groups = [ "gearman" ]
+		aws.tags = { 'Name' => 'gearman' }
+		override.ssh.username = "ubuntu"
+		override.ssh.private_key_path = "~/.ssh/gearman.pem"
+	end
+end
