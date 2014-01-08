@@ -18,14 +18,6 @@ function install_apt_packages {
 	apt-get -y install xchat
 }
 
-function install_netbeans {
-	if [ ! -e /usr/local/netbeans-7.4/bin/netbeans ]; then
-		wget --output-document=/tmp/vagrant/netbeans-7.4-javase-linux.sh https://jacderida-software.s3.amazonaws.com/netbeans-7.4-javase-linux.sh
-		echo "Installing netbeans 7.4 in silent mode. This may take several minutes..."
-		sh /tmp/vagrant/netbeans-7.4-javase-linux.sh --silent
-	fi
-}
-
 function install_install4j {
 	if [ ! -e /opt/install4j/bin/install4j ]; then
 		wget --output-document=/tmp/vagrant/install4j_linux_5_1_7.deb https://jacderida-software.s3.amazonaws.com/install4j_linux_5_1_7.deb
@@ -39,6 +31,5 @@ function install_install4j {
 
 initial_setup
 install_apt_packages
-install_netbeans
 install_install4j
 rm -r /tmp/vagrant
