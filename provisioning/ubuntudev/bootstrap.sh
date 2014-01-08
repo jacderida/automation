@@ -18,21 +18,6 @@ function install_apt_packages {
 	apt-get -y install xchat
 }
 
-function install_virtualbox {
-	if [ ! -e /usr/bin/virtualbox ]; then
-		wget --output-document=/tmp/vagrant/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb https://jacderida-software.s3.amazonaws.com/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb
-		dpkg -i /tmp/vagrant/virtualbox-4.2_4.2.18-88780~Ubuntu~precise_amd64.deb
-	fi
-}
-
-function install_chrome {
-	if [ ! -e /opt/google/chrome/google-chrome ]; then
-		apt-get -y install libxss1
-		wget --output-document=/tmp/vagrant/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-		dpkg -i /tmp/vagrant/google-chrome-stable_current_amd64.deb
-	fi
-}
-
 function install_netbeans {
 	if [ ! -e /usr/local/netbeans-7.4/bin/netbeans ]; then
 		wget --output-document=/tmp/vagrant/netbeans-7.4-javase-linux.sh https://jacderida-software.s3.amazonaws.com/netbeans-7.4-javase-linux.sh
@@ -54,7 +39,6 @@ function install_install4j {
 
 initial_setup
 install_apt_packages
-install_chrome
 install_netbeans
 install_install4j
 rm -r /tmp/vagrant
