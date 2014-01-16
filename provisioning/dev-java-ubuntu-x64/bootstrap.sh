@@ -19,6 +19,8 @@ function install_apt_packages
     apt-get -y install curl
     apt-get -y install xchat
     apt-get -y install python-sphinx
+    apt-get -y install dos2unix
+    apt-get -y install gnome-shell
 }
 
 initial_setup
