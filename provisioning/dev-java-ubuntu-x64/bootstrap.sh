@@ -21,6 +21,7 @@ function install_apt_packages
     apt-get -y install python-sphinx
     apt-get -y install dos2unix
     apt-get -y install gnome-shell
+    apt-get -y install exuberant-ctags
 }
 
 initial_setup
