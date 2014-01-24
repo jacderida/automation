@@ -18,6 +18,7 @@ function install_lib_event
 function install_tmux
 {
     if [ ! -f "/usr/local/bin/tmux" ]; then
+        apt-get install -y ncurses-dev
         wget --output-document=/tmp/tmux-1.8.tar.gz http://downloads.sourceforge.net/tmux/tmux-1.8.tar.gz
         tar -xvf /tmp/tmux-1.8.tar.gz -C /tmp
         present_directory=`pwd`
