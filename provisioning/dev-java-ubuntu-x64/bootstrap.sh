@@ -22,6 +22,7 @@ function install_apt_packages
     apt-get -y install dos2unix
     apt-get -y install gnome-shell
     apt-get -y install exuberant-ctags
+    apt-get -y install libxml-xpath-perl
 }
 
 initial_setup
