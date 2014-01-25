@@ -15,7 +15,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.provision "shell", path: "../../sh/oracle_jdk_7.sh"
 	config.vm.provision "shell", path: "../../sh/virtualbox-debian.sh"
 	config.vm.provision "shell", path: "../../sh/vagrant-debian.sh"
-	config.vm.provision "shell", path: "../../sh/tmux.sh"
+	config.vm.provision "shell", path: "../../sh/tmux-debian.sh"
 	config.vm.provision "shell", path: "../../sh/chrome-debian.sh"
 	config.vm.provision "shell", path: "../../sh/netbeans.sh"
 	config.vm.provision "shell", path: "../../sh/install4j-debian.sh"
