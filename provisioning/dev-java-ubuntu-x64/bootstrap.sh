@@ -23,6 +23,9 @@ function install_apt_packages
     apt-get -y install gnome-shell
     apt-get -y install exuberant-ctags
     apt-get -y install libxml-xpath-perl
+    apt-get -y install libxml2-dev
+    apt-get -y install libxslt1-dev
+    apt-get -y install zlib1g-dev
 }
 
 initial_setup
