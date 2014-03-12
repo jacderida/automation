@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-source ./ncurses-5.9.sh
-source ./libevent-2.0.21-stable.sh
+# Dependencies:
+# ncurses-5.9.sh
+# libevent-2.0.21-stable.sh
+set -e
 
 if [ ! -f "/usr/local/bin/tmux" ]; then
     wget --output-document=/tmp/tmux-1.8.tar.gz http://downloads.sourceforge.net/tmux/tmux-1.8.tar.gz
