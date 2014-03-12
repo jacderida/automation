@@ -15,10 +15,23 @@ function install_lib_event
     fi
 }
 
+function install_ncurses
+{
+    if [ ! -f "/usr/bin/tic" ]; then
+        wget --output-document=/tmp/ncurses-5.9.tar.gz http://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz
+        tar -zxf /tmp/ncurses-5.9.tar.gz -C /tmp
+        present_directory=`pwd`
+        cd /tmp/ncurses-5.9
+        ./configure --prefix=/usr
+        make && make install
+        cd $present_directory
+        rm -r -f /tmp/ncurses-5.9
+    fi
+}
+
 function install_tmux
 {
     if [ ! -f "/usr/local/bin/tmux" ]; then
-        apt-get install -y ncurses-dev
         wget --output-document=/tmp/tmux-1.8.tar.gz http://downloads.sourceforge.net/tmux/tmux-1.8.tar.gz
         tar -xvf /tmp/tmux-1.8.tar.gz -C /tmp
         present_directory=`pwd`
@@ -31,5 +44,6 @@ function install_tmux
     fi
 }
 
+install_ncurses
 install_lib_event
 install_tmux
