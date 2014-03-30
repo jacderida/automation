@@ -3,12 +3,14 @@
 base_command="wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - |"
 
 if [ ! -e "/usr/bin/easy_install" ]; then
+    present_directory=$(pwd)
+    cd /tmpwget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O ez_setup.py
     if [ $(uname -s) == "CYGWIN_NT-6.1" ]
     then
-        install_command="$base_command python"
-        $install_command
+        python ez_setup.py
     else
-        sudo_install_command="$base_command sudo python"
-        $sudo_install_command
+        sudo python ez_setup.py
     fi
+    rm ez_setup.py
+    cd $present_directory
 fi
