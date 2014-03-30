@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | python
-easy_install pip
+if [ ! -e "/usr/bin/pip" ]; then
+    easy_install pip
+fi
