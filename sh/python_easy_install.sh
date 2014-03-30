@@ -13,5 +13,6 @@ if [ ! -e "/usr/bin/easy_install" ]; then
         sudo python ez_setup.py
     fi
     rm ez_setup.py
+    rm setuptools-*.zip
     cd $present_directory
 fi
