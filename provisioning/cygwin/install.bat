@@ -6,4 +6,4 @@ setup-x86_64.exe ^
 --root c:\cygwin ^
 --local-package-dir c:\cygwin\packages ^
 --site http://mirrors-uk.go-parts.com/cygwin ^
---packages binutils,curl,gcc-core,git,libuuid-devel,make,openssh,python,python-crypto,python-paramiko,vim,wget
+--packages binutils,curl,gcc-core,git,libevent-devel,libncursesw-devel,libuuid-devel,make,openssh,python,python-crypto,python-paramiko,vim,wget
