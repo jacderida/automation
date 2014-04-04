@@ -26,6 +26,8 @@ function install_apt_packages
     apt-get -y install libxml2-dev
     apt-get -y install libxslt1-dev
     apt-get -y install zlib1g-dev
+    apt-get -y install libncurses5-dev
+    apt-get -y install libevent-dev
 }
 
 initial_setup
