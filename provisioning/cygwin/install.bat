@@ -6,4 +6,4 @@ setup-x86_64.exe ^
 --root c:\cygwin ^
 --local-package-dir c:\cygwin\packages ^
 --site http://mirrors-uk.go-parts.com/cygwin ^
---packages automake1.14,binutils,cmake,curl,gcc-core,git,libcrypt-devel,libevent-devel,libncursesw-devel,libuuid-devel,make,openssh,python,python-crypto,python-paramiko,ruby,vim,wget
+--packages automake1.14,binutils,cmake,curl,gcc-core,gcc-g++,git,libcrypt-devel,libevent-devel,libncursesw-devel,libuuid-devel,make,openssh,python,python-crypto,python-paramiko,ruby,vim,wget
