@@ -6,7 +6,7 @@ if [ ! -e "/usr/bin/easy_install" ]; then
     present_directory=$(pwd)
     cd /tmp
     wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O ez_setup.py
-    if [ $(uname -s) == "CYGWIN_NT-6.1" ]
+    if [ $(uname -s) == CYGWIN_NT-* ]
     then
         python ez_setup.py
     else
