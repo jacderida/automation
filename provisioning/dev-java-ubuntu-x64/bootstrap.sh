@@ -28,6 +28,7 @@ function install_apt_packages
     apt-get -y install zlib1g-dev
     apt-get -y install libncurses5-dev
     apt-get -y install libevent-dev
+    apt-get -y install cmake
 }
 
 initial_setup
