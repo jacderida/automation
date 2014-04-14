@@ -22,7 +22,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 	config.vm.provision "shell", path: "../../sh/maven3.0.5.sh"
 	config.vm.provision "shell", path: "../../sh/lynx2.8.7.sh"
 	config.vm.provision "shell", path: "../../sh/s3cmd.sh"
-	config.vm.provision "shell", path: "../../sh/tmux-1.9a.sh"
 	config.vm.provision "shell", path: "../../sh/ack-2.12.sh"
 	config.vm.provision "shell", inline: "rm -r /tmp/vagrant"
 	config.vm.provider :virtualbox do |vb|
