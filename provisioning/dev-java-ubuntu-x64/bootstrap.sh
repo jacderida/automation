@@ -30,6 +30,7 @@ function install_apt_packages
     apt-get -y install libevent-dev
     apt-get -y install cmake
     apt-get -y install smbfs
+    apt-get -y install tree
 }
 
 initial_setup
