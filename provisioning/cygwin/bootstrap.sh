@@ -6,3 +6,4 @@ source ../../sh/install_pip.sh
 source ../../sh/install_build_sphinx.sh
 source ../../sh/tmux-1.9a.sh
 source ../../sh/ack-2.12.sh
+source ../../sh/tree-1.7.0.sh
