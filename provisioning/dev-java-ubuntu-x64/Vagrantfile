@@ -5,26 +5,26 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-	if ENV['http_proxy']
-		config.vm.provision "shell", path: "proxy.sh", :args => ENV['http_proxy']
-	end
-	config.vm.box = "ubuntu-1204x64"
-	config.vm.box_url = "https://jacderida-vagrant-boxes.s3.amazonaws.com/ubuntu-1204x64.box"
-	config.vm.provision "shell", path: "bootstrap.sh"
-	config.vm.provision "shell", path: "../../sh/oracle_jdk_6.sh"
-	config.vm.provision "shell", path: "../../sh/oracle_jdk_7.sh"
-	config.vm.provision "shell", path: "../../sh/virtualbox-debian.sh"
-	config.vm.provision "shell", path: "../../sh/vagrant-debian.sh"
-	config.vm.provision "shell", path: "../../sh/tmux-1.9a.sh"
-	config.vm.provision "shell", path: "../../sh/chrome-debian.sh"
-	config.vm.provision "shell", path: "../../sh/netbeans.sh"
-	config.vm.provision "shell", path: "../../sh/install4j-debian.sh"
-	config.vm.provision "shell", path: "../../sh/maven3.0.5.sh"
-	config.vm.provision "shell", path: "../../sh/lynx2.8.7.sh"
-	config.vm.provision "shell", path: "../../sh/s3cmd.sh"
-	config.vm.provision "shell", path: "../../sh/ack-2.12.sh"
-	config.vm.provision "shell", inline: "rm -r /tmp/vagrant"
-	config.vm.provider :virtualbox do |vb|
-		vb.gui = true
-	end
+  if ENV['http_proxy']
+    config.vm.provision "shell", path: "proxy.sh", :args => ENV['http_proxy']
+  end
+  config.vm.box = "ubuntu-1204x64"
+  config.vm.box_url = "https://jacderida-vagrant-boxes.s3.amazonaws.com/ubuntu-1204x64.box"
+  config.vm.provision "shell", path: "bootstrap.sh"
+  config.vm.provision "shell", path: "../../sh/oracle_jdk_6.sh"
+  config.vm.provision "shell", path: "../../sh/oracle_jdk_7.sh"
+  config.vm.provision "shell", path: "../../sh/virtualbox-debian.sh"
+  config.vm.provision "shell", path: "../../sh/vagrant-debian.sh"
+  config.vm.provision "shell", path: "../../sh/tmux-1.9a.sh"
+  config.vm.provision "shell", path: "../../sh/chrome-debian.sh"
+  config.vm.provision "shell", path: "../../sh/netbeans.sh"
+  config.vm.provision "shell", path: "../../sh/install4j-debian.sh"
+  config.vm.provision "shell", path: "../../sh/maven3.0.5.sh"
+  config.vm.provision "shell", path: "../../sh/lynx2.8.7.sh"
+  config.vm.provision "shell", path: "../../sh/s3cmd.sh"
+  config.vm.provision "shell", path: "../../sh/ack-2.12.sh"
+  config.vm.provision "shell", inline: "rm -r /tmp/vagrant"
+  config.vm.provider :virtualbox do |vb|
+    vb.gui = true
+  end
 end
