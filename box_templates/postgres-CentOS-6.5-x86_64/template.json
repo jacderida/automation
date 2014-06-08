@@ -9,7 +9,7 @@
       "disk_size": 10140,
       "guest_os_type": "RedHat_64",
       "http_directory": "http",
-      "iso_checksum": "83221db52687c7b857e65bfe60787838",
+      "iso_checksum": "0d9dc37b5dd4befa1c440d2174e88a87",
       "iso_checksum_type": "md5",
       "iso_url": "CentOS-6.5-x86_64-minimal.iso",
       "ssh_username": "vagrant",
