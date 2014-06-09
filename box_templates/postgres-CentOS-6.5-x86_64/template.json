@@ -50,7 +50,8 @@
       "scripts": [
         "../../sh/setup_epel_repository-RHEL.sh",
         "../../sh/authorize_vagrant_public_key.sh",
-        "../../sh/install_vbox_guest_additions-RHEL.sh"
+        "../../sh/install_vbox_guest_additions-RHEL.sh",
+        "../../sh/postgres-9.3.4.sh"
       ],
       "type": "shell"
     },
