@@ -47,7 +47,10 @@
           "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{.Path}}'"
         }
       },
-      "inline": [ "yum update -y" ],
+      "inline": [
+        "yum update -y",
+        "yum install -y expect expectk"
+      ],
       "type": "shell"
     },
     {
