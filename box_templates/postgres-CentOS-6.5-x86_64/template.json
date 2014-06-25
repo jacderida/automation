@@ -38,8 +38,25 @@
           "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{.Path}}'"
         }
       },
+      "script": "../../sh/setup_epel_repository-RHEL.sh",
+      "type": "shell"
+    },
+    {
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{.Path}}'"
+        }
+      },
+      "inline": [ "yum update -y" ],
+      "type": "shell"
+    },
+    {
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{.Path}}'"
+        }
+      },
       "scripts": [
-        "../../sh/setup_epel_repository-RHEL.sh",
         "../../sh/authorize_vagrant_public_key.sh",
         "../../sh/install_vbox_guest_additions-RHEL.sh",
         "../../sh/postgres-9.3.4.sh"
