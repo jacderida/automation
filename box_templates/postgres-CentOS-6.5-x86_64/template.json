@@ -33,15 +33,6 @@
   ],
   "provisioners": [
     {
-      "type": "shell",
-      "inline": [ "mkdir /tmp/sh" ]
-    },
-    {
-      "type": "file",
-      "source": "../../sh",
-      "destination": "/tmp"
-    },
-    {
       "type": "file",
       "source": "../../keys",
       "destination": "/tmp"
@@ -60,10 +51,6 @@
         "../../sh/postgres-9.3.4.sh"
       ],
       "type": "shell"
-    },
-    {
-      "type": "shell",
-      "inline": [ "rm -rf /tmp/sh" ]
     }
   ]
 }
