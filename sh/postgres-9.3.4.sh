@@ -16,7 +16,7 @@ make && make install
 LD_LIBRARY_PATH=/usr/local/pgsql/lib
 export LD_LIBRARY_PATH
 cd $present_directory
-adduser postgres
 mkdir /usr/local/pgsql/data
 chown postgres /usr/local/pgsql/data
 rm -f postgresql-9.3.4.tar
+rm -rf postgresql-9.3.4
