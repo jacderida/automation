@@ -33,11 +33,6 @@
   ],
   "provisioners": [
     {
-      "type": "file",
-      "source": "../../keys",
-      "destination": "/tmp"
-    },
-    {
       "override": {
         "virtualbox-iso": {
           "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{.Path}}'"
