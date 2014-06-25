@@ -62,6 +62,15 @@
         "../../sh/postgres-9.3.4.sh"
       ],
       "type": "shell"
+    },
+    {
+      "type": "file",
+      "source": "../../sh/postgres_init.expect",
+      "destination": "/tmp/postgres_init.expect"
+    },
+    {
+      "inline": [ "expect /tmp/postgres_init.expect" ],
+      "type": "shell"
     }
   ]
 }

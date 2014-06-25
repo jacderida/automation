@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+
+spawn su - postgres
+expect "^Password:"
+send "postgres\r"
+expect "$ "
+send "/usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data\r"
+send "sed -i \"s/^#listen_addresses = 'localhost'/listen_addresses = '*'/g\" /usr/local/pgsql/data/postgresql.conf\r"
+expect "$ "
+send "echo \"host  all     all     all     trust\" >> /usr/local/pgsql/data/pg_hba.conf\r"
+send "/usr/local/pgsql/bin/pg_ctl -D /usr/local/pgsql/data -l /usr/local/pgsql/data/logfile start\r"
+expect "server starting"
+send "logout\r"
+expect eof
