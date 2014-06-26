@@ -15,6 +15,9 @@ cd postgresql-9.3.4
 make && make install
 LD_LIBRARY_PATH=/usr/local/pgsql/lib
 export LD_LIBRARY_PATH
+cp ./contrib/start-scripts/linux /etc/init.d/postgresql
+chmod a+x /etc/init.d/postgresql
+chkconfig --add postgresql
 cd $present_directory
 mkdir /usr/local/pgsql/data
 chown postgres /usr/local/pgsql/data
