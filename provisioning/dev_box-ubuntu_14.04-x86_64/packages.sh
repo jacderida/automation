@@ -22,3 +22,4 @@ apt-get -y install libevent-dev
 apt-get -y install cmake
 apt-get -y install smbfs
 apt-get -y install tree
+apt-get -y install libsdl-ttf2.0-0
