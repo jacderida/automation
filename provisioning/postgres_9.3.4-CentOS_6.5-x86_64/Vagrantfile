@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "postgres2"
+  config.vm.box = "https://jacderida-vagrant-boxes.s3.amazonaws.com/postgres_9.3.4-CentOS_6.5-x86_64.box"
   config.vm.network "forwarded_port", guest: 5432, host: 7000
   config.vm.provision "shell", inline: "service iptables stop"
 end
