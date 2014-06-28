@@ -1,0 +1,4 @@
+dev_box-ubuntu_14.04-x86_64
+===========================
+
+This configuration is intended to provision an actual hardware based Ubuntu box with all the tools necessary for a general Java/Python/Ruby/Web based development environment. Until I'm more proficient with proper provisioning tools, it'll just use shell scripts.
