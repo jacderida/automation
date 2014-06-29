@@ -8,7 +8,6 @@ source ../../sh/vagrant-debian.sh
 source ../../sh/tmux-1.9a.sh
 source ../../sh/chrome-debian.sh
 source ../../sh/netbeans.sh
-source ../../sh/install4j-debian.sh
 source ../../sh/maven3.0.5.sh
 source ../../sh/lynx2.8.7.sh
 source ../../sh/s3cmd.sh
