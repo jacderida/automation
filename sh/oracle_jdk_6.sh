@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [ ! -e /usr/lib/jvm/java-6-oracle/bin/java ]; then
-	wget --output-document=/tmp/vagrant/jdk-6u45-linux-x64.bin https://jacderida-software.s3.amazonaws.com/jdk-6u45-linux-x64.bin
-	chmod a+x /tmp/vagrant/jdk-6u45-linux-x64.bin
-	/tmp/vagrant/jdk-6u45-linux-x64.bin
+	wget --output-document=/tmp/jdk-6u45-linux-x64.bin https://jacderida-software.s3.amazonaws.com/jdk-6u45-linux-x64.bin
+	chmod a+x /tmp/jdk-6u45-linux-x64.bin
+	/tmp/jdk-6u45-linux-x64.bin
 	mv ./jdk1.6.0_45 ./java-6-oracle
 	mkdir /usr/lib/jvm
 	mv ./java-6-oracle /usr/lib/jvm
