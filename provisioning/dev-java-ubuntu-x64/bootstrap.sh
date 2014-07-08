@@ -31,6 +31,8 @@ function install_apt_packages
     apt-get -y install cmake
     apt-get -y install smbfs
     apt-get -y install tree
+    apt-get -y install libvpx1
+    apt-get -y install libsdl-ttf2.0-0
 }
 
 initial_setup
