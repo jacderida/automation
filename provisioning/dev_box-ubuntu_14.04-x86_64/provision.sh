@@ -13,3 +13,4 @@ source ../../sh/lynx2.8.7.sh
 source ../../sh/s3cmd.sh
 source ../../sh/ack-2.12.sh
 source ../../sh/vim-7.4-debian.sh
+source ../../sh/weechat-debian.sh
