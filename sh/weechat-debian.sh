@@ -2,4 +2,4 @@
 
 add-apt-repository -y ppa:nesthib/weechat-stable
 apt-get update -y
-apt-get install -y weechat
+apt-get install -y --force-yes weechat
