@@ -24,3 +24,9 @@ apt-get -y install smbfs
 apt-get -y install tree
 apt-get -y install libsdl-ttf2.0-0
 apt-get -y install libvpx1
+apt-get -y install openjdk-7-jre-headless
+apt-get -y install openjdk-7-jre-headless:i386
+apt-get -y install openjdk-7-jre
+apt-get -y install openjdk-7-jre:i386
+apt-get -y install icedtea-7-plugin
+apt-get -y install ia32-libs
