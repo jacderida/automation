@@ -30,3 +30,5 @@ apt-get -y install openjdk-7-jre
 apt-get -y install openjdk-7-jre:i386
 apt-get -y install icedtea-7-plugin
 apt-get -y install ia32-libs
+apt-get -y install pidgin
+apt-get -y install pidgin-sipe
