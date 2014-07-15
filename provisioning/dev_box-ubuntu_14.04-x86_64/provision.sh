@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
 source ./packages.sh
-source ../../sh/oracle_jdk_6.sh
-source ../../sh/oracle_jdk_7.sh
 source ../../sh/virtualbox-debian.sh
 source ../../sh/vagrant-debian.sh
 source ../../sh/tmux-1.9a.sh
