@@ -6,12 +6,4 @@ class base_server::authorize_ssh_keys {
     type   => "ssh-rsa",
     user   => "vagrant"
   } ->
-
-  ssh_authorized_key { 'mxroot_authorized_key':
-    ensure => present,
-    key    => "AAAAB3NzaC1yc2EAAAADAQABAAABAQCuYe5YpipgIvxki2oH5pXWkNh/LtUkdfkT3zWw4GNhQtrVj+jr/JR7/NUFCc5efHWv/xycYRELh7++zul5Xjjh5/WbGrSPkShaB3cxn/+3UkhkkcAuCw8MDk2VLMPYTW/1aY4OM6AzXYQ1DLVr6DoYeijIQ7YRPHfX6sK6ZjVoEEaoG8VY8oHNHAn19IzHHrJjEFpSDTV4qHGH2PZSEDB9eZRBN8Y/JvQ3eftJBSzeekzyJAJEJ4Vt8Cfu7RoRkJ0PYkiRV9HevE8uU95VzSs0ZNtxAPy+ZOllb7nfDs0O2fRS68eJqnn8D5oiKP+f5be4qDOdwjxZJL27wC7cjgEH",
-    target => "/home/mxroot/.ssh/authorized_keys",
-    type   => "ssh-rsa",
-    user   => "mxroot"
-  }
 }
