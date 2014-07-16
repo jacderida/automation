@@ -8,4 +8,6 @@ if [[ ! -d "/opt/packer-0.6.0" ]]; then
     cp -r /tmp/packer /opt/packer-0.6.0
     rm -rf /tmp/packer
     rm /tmp/packer-0.6.0_linux_amd64.zip
+    echo "PATH=$PATH:/opt/packer-0.6.0" >> /etc/profile
+	echo "export PATH" >> /etc/profile
 fi
