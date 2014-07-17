@@ -5,5 +5,5 @@ class base_server::authorize_ssh_keys {
     target => "/home/vagrant/.ssh/authorized_keys",
     type   => "ssh-rsa",
     user   => "vagrant"
-  } ->
+  }
 }
