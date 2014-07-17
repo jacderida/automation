@@ -17,5 +17,5 @@ class base_server::packages {
   package { 'install dkms':
     name   => 'dkms',
     ensure => present
-  } ->
+  }
 }
