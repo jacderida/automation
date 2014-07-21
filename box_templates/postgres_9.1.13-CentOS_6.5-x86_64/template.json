@@ -1,0 +1,76 @@
+{
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": 10140,
+      "guest_os_type": "RedHat_64",
+      "http_directory": "http",
+      "iso_checksum": "0d9dc37b5dd4befa1c440d2174e88a87",
+      "iso_checksum_type": "md5",
+      "iso_url": "CentOS-6.5-x86_64-minimal.iso",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_wait_timeout": "10000s",
+      "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant' | sudo -S sh 'shutdown.sh'",
+      "guest_additions_path": "/tmp/VBoxGuestAdditions_{{.Version}}.iso",
+      "virtualbox_version_file": "/tmp/.vbox_version",
+      "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--memory", "512" ],
+        [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "compression_level": 1
+    }
+  ],
+  "provisioners": [
+    {
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{.Path}}'"
+        }
+      },
+      "script": "../../sh/setup_epel_repository-RHEL.sh",
+      "type": "shell"
+    },
+    {
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{.Path}}'"
+        }
+      },
+      "inline": [ "yum install -y expect expectk" ],
+      "type": "shell"
+    },
+    {
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'vagrant' | {{ .Vars }} sudo -E -S sh '{{.Path}}'"
+        }
+      },
+      "scripts": [
+        "../../sh/authorize_vagrant_public_key.sh",
+        "../../sh/install_vbox_guest_additions-RHEL.sh",
+        "../../sh/postgres-9.1.13.sh"
+      ],
+      "type": "shell"
+    },
+    {
+      "type": "file",
+      "source": "../../sh/postgres_init.expect",
+      "destination": "/tmp/postgres_init.expect"
+    },
+    {
+      "inline": [ "expect /tmp/postgres_init.expect" ],
+      "type": "shell"
+    }
+  ]
+}

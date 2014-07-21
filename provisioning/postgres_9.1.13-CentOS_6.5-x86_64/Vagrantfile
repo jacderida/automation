@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "https://jacderida-vagrant-boxes.s3.amazonaws.com/postgres_9.1.13-CentOS-6.5-x86_64.box"
+  config.vm.network "forwarded_port", guest: 5432, host: 7000
+  config.vm.provision "shell", inline: "service iptables stop"
+end
