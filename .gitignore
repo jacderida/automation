@@ -2,3 +2,5 @@
 *.swp
 *.iso
 *.box
+*.tmp*
+*.librarian*
