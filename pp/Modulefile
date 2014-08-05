@@ -1,0 +1,8 @@
+name          'automation'
+version       '0.1.0'
+author        'Chris O'Neil'
+license       'Apache 2.0'
+summary       'Automation Repository'
+description   'Automation Repository'
+
+dependency 'puppetlabs/stdlib'
