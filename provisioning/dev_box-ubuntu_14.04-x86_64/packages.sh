@@ -34,3 +34,4 @@ apt-get -y install pidgin
 apt-get -y install pidgin-sipe
 apt-get -y install libappindicator1
 apt-get -y install pgadmin3
+apt-get -y install graphviz
