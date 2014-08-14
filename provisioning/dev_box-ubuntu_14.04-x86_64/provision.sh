@@ -13,3 +13,4 @@ source ../../sh/vim-7.4-debian.sh
 source ../../sh/weechat-debian.sh
 source ../../sh/eclipse-4.1.4.sh
 source ../../sh/packer-0.6.0-x86_64.sh
+source ../../sh/jq-1.4.sh
