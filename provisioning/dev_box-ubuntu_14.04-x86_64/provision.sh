@@ -14,3 +14,4 @@ source ../../sh/weechat-debian.sh
 source ../../sh/eclipse-4.1.4.sh
 source ../../sh/packer-0.6.0-x86_64.sh
 source ../../sh/jq-1.4.sh
+source ../../sh/mongodb-linux-x86_64-2.6.4.sh
