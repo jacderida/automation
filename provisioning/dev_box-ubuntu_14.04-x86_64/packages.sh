@@ -37,3 +37,4 @@ apt-get -y install pgadmin3
 apt-get -y install graphviz
 apt-get -y install sshpass
 apt-get -y install htop
+apt-get -y install xclip
