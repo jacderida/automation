@@ -16,5 +16,4 @@ if [ ! -d "/opt/lynx2-8-7" ]; then
     cd $present_directory
     rm -r /tmp/lynx2-8-7
     rm /tmp/lynx2.8.7.tar.gz
-    echo "export PATH=/opt/lynx2-8-7:$PATH" >> /etc/profile
 fi

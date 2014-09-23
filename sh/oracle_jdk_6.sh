@@ -15,10 +15,4 @@ if [ ! -e /usr/lib/jvm/java-6-oracle/bin/java ]; then
 	update-alternatives --config javaws
     JAVA_HOME=/usr/lib/jvm/java-6-oracle
     JAVA_BIN=$JAVA_HOME/bin
-	echo "JAVA_HOME=$JAVA_HOME" >> /etc/profile
-	echo "JAVA_BIN=$JAVA_BIN" >> /etc/profile
-    echo "PATH=$PATH:$JAVA_BIN" >> /etc/profile
-	echo "export JAVA_HOME" >> /etc/profile
-	echo "export JAVA_BIN" >> /etc/profile
-	echo "export PATH" >> /etc/profile
 fi
