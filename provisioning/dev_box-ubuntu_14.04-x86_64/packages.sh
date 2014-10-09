@@ -2,6 +2,7 @@
 
 apt-get update
 apt-get -y install python-pip
+pip install virtualenv
 apt-get -y install git
 apt-get -y install subversion
 apt-get -y --force-yes install git-svn
@@ -33,3 +34,5 @@ apt-get -y install sshpass
 apt-get -y install htop
 apt-get -y install xclip
 apt-get -y install pylint
+apt-get -y install mysql
+apt-get -y install libmysqlclient-dev
