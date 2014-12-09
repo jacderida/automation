@@ -3,6 +3,7 @@
 apt-get update
 apt-get -y install python-pip
 pip install virtualenv
+pip install pyrax
 apt-get -y install git
 apt-get -y install subversion
 apt-get -y --force-yes install git-svn
