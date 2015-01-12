@@ -17,3 +17,4 @@ source ../../sh/jq-1.4.sh
 source ../../sh/mongodb-linux-x86_64-2.6.4.sh
 source ../../sh/docker_latest-debian.sh
 source ../../sh/packer-0.7.2-x86_64.sh
+source ../../sh/vimpager-debian.sh
