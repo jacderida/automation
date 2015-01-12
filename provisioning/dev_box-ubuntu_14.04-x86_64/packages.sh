@@ -41,6 +41,7 @@ function install_python_packages() {
     apt-get -y install python-pip
     pip install virtualenv
     pip install pyrax
+    pip install pygments
     # The following are required to get Pyrax working correctly.
     pip install -U six
     cp /usr/local/lib/python2.7/dist-packages/six.py /usr/lib/python2.7/dist-packages
