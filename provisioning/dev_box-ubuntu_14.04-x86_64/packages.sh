@@ -45,6 +45,7 @@ function install_python_packages() {
     pip install rednose
     pip install nose-progessive
 	pip install pygments
+	pip install rackspace-novaclient
     # The following are required to get Pyrax working correctly.
     pip install -U six
     cp /usr/local/lib/python2.7/dist-packages/six.py /usr/lib/python2.7/dist-packages
