@@ -1,5 +1,23 @@
 #!/usr/bin/env bash
 
+function install_python_packages() {
+    apt-get -y install python-pip
+    pip install virtualenv
+    pip install pyrax
+    pip install nose
+    pip install rednose
+    pip install nose-progessive
+    pip install pygments
+    pip install keyring
+    pip install rackspace-novaclient
+    pip install supernova
+    pip install python-heatclient
+    pip install swiftly
+    # The following are required to get Pyrax working correctly.
+    pip install -U six
+    cp /usr/local/lib/python2.7/dist-packages/six.py /usr/lib/python2.7/dist-packages
+}
+
 apt-get update
 apt-get -y install git
 apt-get -y install subversion
@@ -36,21 +54,3 @@ apt-get -y install pylint
 apt-get -y install mysql-client
 apt-get -y install libmysqlclient-dev
 apt-get -y install net-tools
-
-function install_python_packages() {
-    apt-get -y install python-pip
-    pip install virtualenv
-    pip install pyrax
-    pip install nose
-    pip install rednose
-    pip install nose-progessive
-	pip install pygments
-	pip install keyring
-	pip install rackspace-novaclient
-	pip install supernova
-	pip install python-heatclient
-	pip install swiftly
-    # The following are required to get Pyrax working correctly.
-    pip install -U six
-    cp /usr/local/lib/python2.7/dist-packages/six.py /usr/lib/python2.7/dist-packages
-}
