@@ -19,3 +19,4 @@ source ../../sh/packer-0.7.2-x86_64.sh
 source ../../sh/vimpager-debian.sh
 source ../../sh/lame-3.99-debian.sh
 source ../../sh/node_js-0.12.2.sh
+source ../../sh/ls.sh
