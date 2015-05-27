@@ -12,6 +12,8 @@ function install_python_packages() {
     pip install rackspace-novaclient
     pip install supernova
     pip install python-heatclient
+    pip install i3-py
+    pip install python-libxdo==0.1a
     pip install swiftly
     # The following are required to get Pyrax working correctly.
     pip install -U six
