@@ -56,3 +56,4 @@ apt-get -y install pylint
 apt-get -y install mysql-client
 apt-get -y install libmysqlclient-dev
 apt-get -y install net-tools
+apt-get -y install xdotool
