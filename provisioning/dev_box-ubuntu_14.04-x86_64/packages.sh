@@ -23,6 +23,7 @@ function install_python_packages() {
 apt-get update
 apt-get -y install git
 apt-get -y install subversion
+apt-get -y install python-dev
 install_python_packages
 apt-get -y --force-yes install git-svn
 add-apt-repository -y ppa:rabbitvcs/ppa && apt-get update
