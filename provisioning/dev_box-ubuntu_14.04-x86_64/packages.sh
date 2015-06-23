@@ -22,6 +22,7 @@ function install_python_packages() {
 
 apt-get update
 apt-get -y install git
+apt-get -y install bzr
 apt-get -y install subversion
 apt-get -y install python-dev
 install_python_packages
