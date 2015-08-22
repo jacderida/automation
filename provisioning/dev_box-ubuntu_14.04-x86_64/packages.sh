@@ -61,3 +61,4 @@ apt-get -y install net-tools
 apt-get -y install xdotool
 apt-get -y install w3m
 apt-get -y install mutt-patched
+apt-get -y install mpd mpc ncmpcpp
