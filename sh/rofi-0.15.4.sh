@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+apt-get install -y libpango1.0 libxft-dev libxinerama1 libxinerama-dev pkg-config
+
 present_directory=$(pwd)
 cd /tmp
 curl -OL https://github.com/DaveDavenport/rofi/releases/download/0.15.4/rofi-0.15.4.tar.gz
